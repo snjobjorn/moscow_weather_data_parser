@@ -3,6 +3,11 @@ from utils.parse_dates import parse_russian_dates
 
 
 def get_weather_from_page(page_soup):
+    """
+        Извлекает погодные данные из объекта BeautifulSoup, представляющего страницу с архивным прогнозом погоды.
+        Анализирует HTML-структуру страницы и собирает данные о погоде, такие как температура, влажность, ветер и т.д.,
+        возвращая их в виде словаря.
+    """
     cols_to_parse = [
         ".cell-forecast-time", ".cell-forecast-main", ".cell-forecast-temp", ".icon-wind",
         ".wind-amount", ".cell-forecast-press", ".cell-forecast-hum", ".cell-forecast-prec"

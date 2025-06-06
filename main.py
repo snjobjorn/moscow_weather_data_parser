@@ -6,6 +6,9 @@ from datetime import datetime, timedelta
 from utils import get_page_content, get_weather_data
 
 def main():
+    """
+        Основная функция, которая управляет процессом сбора и сохранения архивных погодных данных по Москве.
+    """
     result = dict()
     os.makedirs("result", exist_ok=True)
     current = datetime(year=2024, month=1, day=1)
